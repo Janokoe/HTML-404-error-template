@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'teko', sans-serif;
+}
+body {
+  background: #262626;
+}
+.problem-report {
+  color: #fff;
+  margin-top: 15%;
+  margin-bottom: -10%;
+  opacity: 0;
+}
+h1 {
+  text-align: center;
+  font-size: 4em;
+}
+p {
+ text-align: center;
+ font-size: 2em;
+}
+.wrapper-1 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+.bar {
+  width: 785px;
+  height: 40px;
+  border-radius: 5px;
+  background: #fff;
+}
+.wrapper-2 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+.wrapper-2 span {
+  color: #fff;
+  border: 6px solid #fff;
+  padding: 0 35px;
+  border-radius: 25px;
+  margin: 0 30px;
+  background: #262626;
+  outline: 12.5px solid #262626;
+}
+.numberBox-4 {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.1em;
+  line-height: 1.2em;
+  font-weight: bold;
+  font-size: 20em;
+}
+.numberBox-4:after {
+  position: relative;
+  white-space: pre;
+  content: "4\A 5\A 6\A 7\A 8\A 9\A 0\A 1\A 2\A 3";
+}
+.numberBox-0 {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.1em;
+  line-height: 1.2em;
+  font-weight: bold;
+  font-size: 20em;
+}
+.numberBox-0:after {
+  position: relative;
+  white-space: pre;
+  content: "0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9";
+}
+.numberBox-4.first-number:after {
+  animation: animate 1.3s steps(20);
+}
+.numberBox-0.second-number:after {
+  animation: animate 1s steps(20);
+}
+.numberBox-4.third-number:after {
+  animation: animate 0.5s steps(20);
+}
+
+@keyframes animate {
+  0%{
+    top: 0;
+  }
+  100%{
+    top: -10em;
+  }
+}
+.wrapper-3 {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 160px;
+  color: #fff;
+  background: #262626;
+  border-radius: 50px;
+  border: 5px solid #fff;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  transition: all 0.5s ease;
+  text-decoration: none;
+  animation: opacity 3.5s;
+}
+.button:hover {
+  color: #262626;
+  background: #fff;
+}
+.button span {
+  font-family: 'teko', sans-serif;
+  font-weight: bold;
+  font-size: 2.5em;
+  padding-top: 5px;   
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }  
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+@media (max-width: 1600px) {
+  .bar {
+    width: 475px;
+    height: 20px;
+  }
+  .wrapper-2 span {
+    border: 6px solid #fff;
+    padding: 0 25px;
+    border-radius: 25px;
+    margin: 0 15px;
+    outline: 6px solid #262626;
+  }
+  .numberBox-4 {
+    font-size: 10em;
+  }
+  .numberBox-0 {
+    font-size: 10em;
+  }
+}
+@media (max-width: 950px) {
+  .wrapper-1 {
+    opacity: 0;
+  }
+  .wrapper-2 {
+    opacity: 0;
+  }
+  .problem-report {
+    opacity: 1;
+  }
+}
+
